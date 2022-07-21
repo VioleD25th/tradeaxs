@@ -22,15 +22,15 @@ const Row = ({ data, type, handleToggle = () => {} }) => {
   }
   return (
     <tr>
-      <td className="p-3 text-xs lg:text-sm first:pl-6">{data.advertiser}</td>
-      <td className="p-3 text-xs lg:text-sm">{data.price} USD</td>
-      <td className="flex flex-col gap-2 p-3 text-xs lg:text-sm">
+      <td className="p-3 text-xs lg:text-sm first:pl-6" style={{verticalAlign: 'top'}}>{data.advertiser}</td>
+      <td className="p-3 text-xs lg:text-sm" style={{verticalAlign: 'top'}}>{data.price} USD</td>
+      <td className="flex flex-col gap-2 p-3 text-xs lg:text-xs">
         <span>
           <span className="font-medium">Available</span>&nbsp; {data.available}{" "}
           USDT
         </span>
         <span>
-          <span className="font-medium">Limit</span>&nbsp;&nbsp;&nbsp;&nbsp;
+          <span className="font-medium">Limit</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
@@ -42,11 +42,11 @@ const Row = ({ data, type, handleToggle = () => {} }) => {
           }).format(data.limit[1])}
         </span>
       </td>
-      <td className="p-3 text-xs capitalize">{data.payment}</td>
+      <td className="p-3 text-xs capitalize" style={{verticalAlign: 'top'}}>{data.payment}</td>
       {type === "p2p" && (
-        <td className="p-3">
+        <td className="p-3" style={{verticalAlign: 'top'}}>
           <button
-            className="px-6 py-2 text-xs font-bold bg-white rounded-md text-accent"
+            className="px-6 py-2 text-xs font-bold bg-white rounded-md text-accent" 
             onClick={handleToggle}
           >
             Buy {data.trade}
