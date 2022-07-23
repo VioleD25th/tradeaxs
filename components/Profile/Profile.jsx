@@ -183,15 +183,17 @@ margin: 0 auto;
 // padding-left: 20px;
 margin-top: -30px;
 flex-wrap: nowrap;
-gap: 20px;
+gap: 25px;
+margin-left: -2em;
 justify-content: center;
-transform: scale(0.75, 0.75);
+transform: scale(0.85, 0.85);
 
 @media(max-width: 640px) {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    margin-top: -8em;
+    margin-top: -5em;
+    
     
 
 }
