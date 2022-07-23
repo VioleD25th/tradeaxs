@@ -16,8 +16,10 @@
     "formik": "^2.2.9",
     "js-cookies": "^1.0.4",
     "next": "^12.2.1-canary.1",
+    "prop-types": "^15.8.1",
     "react": "17.0.2",
     "react-apexcharts": "^1.4.0",
+    "react-avatar": "^5.0.1",
     "react-crypto-chart": "^0.0.6",
     "react-customizable-progressbar": "^1.0.3",
     "react-dom": "17.0.2",
@@ -25,6 +27,7 @@
     "react-table": "^7.8.0",
     "react-toastify": "^9.0.5",
     "sharp": "^0.30.7",
+    "styled-components": "^5.3.5",
     "yup": "^0.32.11"
   },
   "devDependencies": {
