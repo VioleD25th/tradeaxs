@@ -7,6 +7,7 @@ import Link from "next/link";
 import UpdateInput from "../UpdateInput";
 import { updateStructure } from "../../data/Update";
 import Loading from "../Loading";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 const Update = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -42,6 +43,7 @@ return (
     <Container>
         <DivContainer>
         <LeftPane>
+            <div className="flex-nowrap min-w-fit">
             <div className="flex flex-nowrap gap-3 mt-5 justify-center align-center mb-2" >
             
             <Avatar  color={Avatar.getRandomColor('sitebase', ['red', 'green', 'orange'])} name="W" id="William" size ="80" round={true}/>
@@ -59,51 +61,85 @@ return (
                 <p>********986</p>
             </div>
 
-            <div className="justify-start text-left">
+            <div className="justify-start text-left flex-nowrap w-full">
                 <br />
                 <div className="details  leading-6 text-left text-sm">
-                    <span className="flex justify-between flex-nowrap ">    
-                    <div className="">             
-                        <p className="font-bold">Account Name:</p>
-                        </div>  
-                        <div className="">  
-                        <p className="text-left"> William Ted</p></div>  
-                    </span>
+                  
+                    <div className="justify-between gap-5">
+                        <div className="flex items-center gap-5" style={{marginBottom: '-5px'}}>
+                        <div className="manage items-center justify-center">
+                            <p className=" w-44 ">Account Name: </p>
+                            
+                        </div>
+                        
+                        <div className=" w-full items-center ">
+                            <p className="w-max text-sm">William Ted</p>
+                        </div><svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                        </div>
+                        
+                       
 
-                    <div className="flex justify-between flex-nowrap ">                   
-                        <p className="font-bold">Bank:</p>
-                        <p className=" 
-                       justify-start text-left">Wema Bank</p>
+                        <div className="flex items-center gap-5" style={{marginBottom: '-5px'}}>
+                         <div className="wmanage2 items-center justify-center">
+                            <p className="w-44">Bank: </p>
+                        </div>
+
+                        <div className="w-full items-center text-sm text-left">
+                            <p className="w-max">Wema Bank</p>
+                            </div><svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                        </div>
+
+                        <div className="flex items-center gap-5">
+                         <div className="wmanage2 items-center justify-center">
+                            <p className="w-44">Account Number: </p>
+                        </div>
+
+                        <div className="w-full items-center text-sm text-left">
+                            <p className="w-max">012345678900</p>
+                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                        </div>
                     </div>
 
-                    <span className="flex justify-between flex-nowrap">
-                        <p className="font-bold">Account Number:</p>
-                        <p>012345678900</p>
-                    </span>
                     <br /><br />
 
-                    <span className="flex justify-between flex-nowrap text-xs">
-                        <p className="font-thin">Virtual Account Name:</p>
-                        
-                        <p >William Ted</p>
-                    </span>
 
-                    <span className="flex justify-between flex-nowrap text-xs">
-                        <p className="font-thin">Bank:</p>
+                    <div className="justify-between gap-5">
+                        <div className="flex items-center gap-5" style={{marginBottom: '-5px'}}>
+                        <div className="manage items-center justify-center">
+                            <p className=" w-44 ">Virtual Account Name: </p>
+                        </div>
                         
-                        <p >Wema Bank</p>
-                    </span>
+                        <div className=" w-full items-center text-sm ">
+                            <p className="w-max">William Ted</p>
+                        </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                        </div>
 
-                    <span className="flex justify-between flex-nowrap text-xs">
-                        <p className="font-thin">Account Number:</p>
-                        
-                        <p >0123456789876</p>
-                    </span>
+                        <div className="flex items-center gap-5" style={{marginBottom: '-5px'}}>
+                         <div className="wmanage2 items-center justify-center">
+                            <p className="w-44">Bank: </p>
+                        </div>
+
+                        <div className="w-full items-center text-sm text-left">
+                            <p className="w-max">Wema Bank</p> 
+                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                        </div>
+
+                        <div className="flex items-center gap-5" style={{marginBottom: '-5px'}}>
+                         <div className="wmanage2 items-center justify-center">
+                            <p className="w-44">Account Name: </p>
+                        </div>
+
+                        <div className="w-full items-center text-sm text-left">
+                            <p className="w-max">012345678900</p>
+                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                        </div>
+                    </div>
 
                     <button className="rounded p-2 bg-white mt-10 text-blue-500 
-                    text-xs float-right" type="Submit">Become A Merchant</button>
+                    text-sm float-right" type="Submit">Become A Merchant</button>
                 </div>
 
+            </div>
             </div>
         </LeftPane>
         <RightPane>
@@ -184,16 +220,20 @@ margin: 0 auto;
 margin-top: -30px;
 flex-wrap: nowrap;
 gap: 25px;
-margin-left: -2em;
+margin-left: -6em;
 justify-content: center;
-transform: scale(0.85, 0.85);
+transform: scale(0.75, 0.75);
 
-@media(max-width: 640px) {
+@media(max-width: 768px) {
     flex-direction: column;
     justify-content: center;
+    // transform: scale(0.85,0.85);
     margin: 0 auto;
-    margin-top: -5em;
-    
+     margin-left: -8vw;
+      margin-top: -5em;
+    max-width: 100vw;
+    flex-wrap: wrap;
+  
     
 
 }
