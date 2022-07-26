@@ -7,7 +7,7 @@ import Link from "next/link";
 import UpdateInput from "../UpdateInput";
 import { updateStructure } from "../../data/Update";
 import Loading from "../Loading";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import ContentCopy from "@mui/icons-material/ContentCopy";
 
 const Update = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -74,7 +74,7 @@ return (
                         
                         <div className=" w-full items-center ">
                             <p className="w-max text-sm">William Ted</p>
-                        </div><svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                        </div><svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
                         </div>
                         
                        
@@ -86,7 +86,7 @@ return (
 
                         <div className="w-full items-center text-sm text-left">
                             <p className="w-max">Wema Bank</p>
-                            </div><svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                            </div><svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
                         </div>
 
                         <div className="flex items-center gap-5">
@@ -96,7 +96,7 @@ return (
 
                         <div className="w-full items-center text-sm text-left">
                             <p className="w-max">012345678900</p>
-                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
                         </div>
                     </div>
 
@@ -111,7 +111,7 @@ return (
                         
                         <div className=" w-full items-center text-sm ">
                             <p className="w-max">William Ted</p>
-                        </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                        </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
                         </div>
 
                         <div className="flex items-center gap-5" style={{marginBottom: '-5px'}}>
@@ -121,7 +121,7 @@ return (
 
                         <div className="w-full items-center text-sm text-left">
                             <p className="w-max">Wema Bank</p> 
-                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
                         </div>
 
                         <div className="flex items-center gap-5" style={{marginBottom: '-5px'}}>
@@ -131,7 +131,7 @@ return (
 
                         <div className="w-full items-center text-sm text-left">
                             <p className="w-max">012345678900</p>
-                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopyIcon"> <ContentCopyIcon htmlColor="white"/></svg>
+                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
                         </div>
                     </div>
 
