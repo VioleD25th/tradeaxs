@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #f7f4ed;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #e0cbcb;
+  border-radius: 100vh;
+  border: 3px solid #f6f7ed;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #c0a0b9;
+}
+
+.dashboard {
+  background: radial-gradient(
+    123.22% 129.67% at 100.89% -5.6%,
+    #0c4dae 0%,
+    #17153a 100%
+  );
+}
+
+.sidebar {
+  background: linear-gradient(
+    180deg,
+    rgba(12, 77, 174, 0.65) 0%,
+    rgba(27, 25, 66, 0.85) 57.44%,
+    #17163b 100%
+  );
+}
+
+.notification {
+  background: linear-gradient(136.67deg, #ff409a 8.34%, #c438ef 95.26%);
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 31px #ba1358;
+}
+
+.notificationModal {
+  background: linear-gradient(
+    210.96deg,
+    rgba(12, 77, 174, 0.61) 0.01%,
+    rgba(38, 35, 83, 0.7) 42.05%,
+    rgba(62, 59, 115, 0) 104.81%
+  );
+  filter: drop-shadow(0px 48px 69px rgba(23, 18, 43, 0.845335));
+  backdrop-filter: blur(20px);
+}
+
+.walletCard {
+  background: linear-gradient(
+    135deg,
+    #40ddff 0%,
+    #14bae3 19.24%,
+    #13b1e6 68.64%,
+    #11aadf 81.77%,
+    #0b98c5 100%
+  );
+}
