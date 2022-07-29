@@ -6,7 +6,7 @@ import ProfileCard from "../components/Profile/Profile";
 const Profile = () => {
   return (
     <AuthLayout>
-      <section className="w-full max-w-full text-white md:pt-4">
+      <section className="w-full max-w-full text-black md:pt-4">
         <Transactions />
         <div className="space-y-[1.375rem] max-w-[35.8rem] mb-24">
           <ProfileCard />

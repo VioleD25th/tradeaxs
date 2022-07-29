@@ -33,7 +33,7 @@ const Profile = () => {
             pair="BTCBUSD"
             chartLayout={{
               layout: {
-                backgroundColor: "#0C4DAE",
+                backgroundColor: "#000000",
                 textColor: "#ffffff",
               },
               grid: {

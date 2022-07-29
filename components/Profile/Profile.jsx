@@ -7,9 +7,13 @@ import Link from "next/link";
 import UpdateInput from "../UpdateInput";
 import { updateStructure } from "../../data/Update";
 import Loading from "../Loading";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import ContentCopy from "@mui/icons-material/ContentCopy";
 
+
 const Update = () => {
+
+ 
   const [isLoading, setIsLoading] = useState(false);
   //validation schema
   const submitHandler = async (val) => {
@@ -24,7 +28,10 @@ const Update = () => {
       toast.error(`${err?.msg || "Error:"}
       ${email || err?.errors?.username[0] || " "}`);
     }
+
   };
+
+
 
 const UpdateSchema = Yup.object().shape({
     name: Yup.string().required("Field is required"),
@@ -39,11 +46,12 @@ const UpdateSchema = Yup.object().shape({
       .oneOf([Yup.ref("password"), null], "Passwords must match"),
   });
 
+  
 return (
     <Container>
         <DivContainer>
         <LeftPane>
-            <div className="flex-nowrap min-w-fit">
+            <div className="flex-nowrap min-w-fit text-white">
             <div className="flex flex-nowrap gap-3 mt-5 justify-center align-center mb-2" >
             
             <Avatar  color={Avatar.getRandomColor('sitebase', ['red', 'green', 'orange'])} name="W" id="William" size ="80" round={true}/>
@@ -75,6 +83,7 @@ return (
                         <div className=" w-full items-center ">
                             <p className="w-max text-sm">William Ted</p>
                         </div><svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
+
                         </div>
                         
                        
@@ -145,7 +154,7 @@ return (
         <RightPane>
 
            <div className="">
-            <p className="text-left capitalize">Update Profile</p>
+            <p className="text-left text-white capitalize">Update Profile</p>
 
             <Formik
           initialValues={{
@@ -164,7 +173,7 @@ return (
         >
           {() => (
             
-            <Form className="  w-inherit md:w-full flex-wrap md:justify-start mt-5 flex ">
+            <Form className="  w-inherit md:w-full text-red-500 flex-wrap md:justify-start mt-5 flex ">
               {updateStructure.map((field, index) => {
                 return (
                   <UpdateInput
@@ -174,13 +183,14 @@ return (
                     name={field.name}
                     type={field.type}
                     placeholder={field.placeholder}
-                  />
+                   />
                 );
               })}
+              
               <div>
                 <div className="mt-4 text-xs md:w-2/4 text-left md:text-sm">
 
-                <h1 className="font-medium text-base leading-8">Terms and Conditions </h1>
+                <h1 className="font-medium text-base text-white leading-8">Terms and Conditions </h1>
                 <p>If any of the information provided are false your account will be frozen and reported to your local authorities </p>
                 </div>
                 
