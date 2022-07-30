@@ -9,9 +9,9 @@ import AuthLayout from "../../components/Layouts/AuthLayout";
 //import TradeViewChart from "react-crypto-chart";
 import dynamic from "next/dynamic";
 
-const CryptoChart = dynamic(() => import("react-crypto-chart"), {
-  ssr: false,
-});
+// const CryptoChart = dynamic(() => import("react-crypto-chart"), {
+//   ssr: false,
+// });
 
 const Profile = () => {
   useEffect(() => {
@@ -27,9 +27,9 @@ const Profile = () => {
       <ToastContainer autoClose={1000} />
       <section className="w-full text-white md:pt-4">
         <Wallets />
-        <div className="w-full max-w-full my-10 h-80 lg:h-96">
+        {/* <div className="w-full max-w-full my-10 h-80 lg:h-96"> */}
           {/* <LineChart /> */}
-          <CryptoChart
+          {/* <CryptoChart
             pair="BTCBUSD"
             chartLayout={{
               layout: {
@@ -67,8 +67,8 @@ const Profile = () => {
               borderRadius: "5px",
               overflow: "hidden",
             }}
-          />
-        </div>
+          /> */}
+        {/* </div> */}
         <div className="flex flex-col mt-5 mb-10 space-y-10 lg:flex-row lg:space-y-0 lg:space-x-10">
           <Trends />
           <History />
