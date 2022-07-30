@@ -1,3 +1,6 @@
+import { IoIosCopy } from "react-icons/io";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import React, {useState} from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -13,6 +16,10 @@ import ContentCopy from "@mui/icons-material/ContentCopy";
 
 const Update = () => {
 
+ const copied = (value) => {
+    navigator.clipboard.writeText(value);
+    toast.success("Copied to clipboard");
+  };
  
   const [isLoading, setIsLoading] = useState(false);
   //validation schema
@@ -46,9 +53,12 @@ const UpdateSchema = Yup.object().shape({
       .oneOf([Yup.ref("password"), null], "Passwords must match"),
   });
 
+ 
+
   
 return (
     <Container>
+      <ToastContainer autoClose={500} />
         <DivContainer>
         <LeftPane>
             <div className="flex-nowrap min-w-fit text-white">
@@ -82,7 +92,11 @@ return (
                         
                         <div className=" w-full items-center ">
                             <p className="w-max text-sm">William Ted</p>
-                        </div><svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
+                        </div><IoIosCopy
+                  className="w-16 cursor-pointer"
+                  onClick={(e) => {
+                    copied(e.currentTarget.previousElementSibling.textContent);
+                  }} />
 
                         </div>
                         
@@ -95,7 +109,11 @@ return (
 
                         <div className="w-full items-center text-sm text-left">
                             <p className="w-max">Wema Bank</p>
-                            </div><svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
+                            </div><IoIosCopy
+                  className="w-16  cursor-pointer"
+                  onClick={(e) => {
+                    copied(e.currentTarget.previousElementSibling.textContent);
+                  }} />
                         </div>
 
                         <div className="flex items-center gap-5">
@@ -105,7 +123,11 @@ return (
 
                         <div className="w-full items-center text-sm text-left">
                             <p className="w-max">012345678900</p>
-                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
+                            </div> <IoIosCopy
+                  className="w-16 cursor-pointer"
+                  onClick={(e) => {
+                    copied(e.currentTarget.previousElementSibling.textContent);
+                  }} />
                         </div>
                     </div>
 
@@ -120,7 +142,11 @@ return (
                         
                         <div className=" w-full items-center text-sm ">
                             <p className="w-max">William Ted</p>
-                        </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
+                        </div>  <IoIosCopy
+                  className="w-16 cursor-pointer"
+                  onClick={(e) => {
+                    copied(e.currentTarget.previousElementSibling.textContent);
+                  }} />
                         </div>
 
                         <div className="flex items-center gap-5" style={{marginBottom: '-5px'}}>
@@ -130,7 +156,11 @@ return (
 
                         <div className="w-full items-center text-sm text-left">
                             <p className="w-max">Wema Bank</p> 
-                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
+                            </div> <IoIosCopy
+                  className="w-16 cursor-pointer"
+                  onClick={(e) => {
+                    copied(e.currentTarget.previousElementSibling.textContent);
+                  }} />
                         </div>
 
                         <div className="flex items-center gap-5" style={{marginBottom: '-5px'}}>
@@ -140,7 +170,11 @@ return (
 
                         <div className="w-full items-center text-sm text-left">
                             <p className="w-max">012345678900</p>
-                            </div> <svg className="w-12 h-8 items-center" data-testid="ContentCopy"> <ContentCopy htmlColor="white"/></svg>
+                            </div> <IoIosCopy
+                  className="w-16 cursor-pointer"
+                  onClick={(e) => {
+                    copied(e.currentTarget.previousElementSibling.textContent);
+                  }} />
                         </div>
                     </div>
 
@@ -173,7 +207,7 @@ return (
         >
           {() => (
             
-            <Form className="  w-inherit md:w-full text-red-500 flex-wrap md:justify-start mt-5 flex ">
+            <Form className="  w-inherit md:w-full text-white flex-wrap md:justify-start mt-5 flex ">
               {updateStructure.map((field, index) => {
                 return (
                   <UpdateInput

@@ -16,7 +16,7 @@ const Wallet = (props) => {
         <div className="space-y-[1rem] max-w-[35.8rem] mb-24">
           {["btc", "eth", "ltc", "doge", "bnb", "busdt", "usdt"].map(
             (item, i) => {
-              return <WalletCard />;
+              return <WalletCard key={i} item={item}/>
             }
           )}
         </div>
