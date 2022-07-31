@@ -58,10 +58,10 @@ const UpdateSchema = Yup.object().shape({
   
 return (
     <Container>
-      <ToastContainer autoClose={500} />
+        <ToastContainer />
         <DivContainer>
-        <LeftPane>
-            <div className="flex-nowrap min-w-fit text-white">
+        <LeftPane className="bg-[rgba(12,77,174,0.37)] contrast-150 drop-shadow-md">
+            <div className="flex-nowrap text-white">
             <div className="flex flex-nowrap gap-3 mt-5 justify-center align-center mb-2" >
             
             <Avatar  color={Avatar.getRandomColor('sitebase', ['red', 'green', 'orange'])} name="W" id="William" size ="80" round={true}/>
@@ -110,7 +110,7 @@ return (
                         <div className="w-full items-center text-sm text-left">
                             <p className="w-max">Wema Bank</p>
                             </div><IoIosCopy
-                  className="w-16  cursor-pointer"
+                  className="w-16 cursor-pointer"
                   onClick={(e) => {
                     copied(e.currentTarget.previousElementSibling.textContent);
                   }} />
@@ -185,7 +185,7 @@ return (
             </div>
             </div>
         </LeftPane>
-        <RightPane>
+        <RightPane className="bg-[rgba(12,77,174,0.37)] contrast-150 drop-shadow-md">
 
            <div className="">
             <p className="text-left text-white capitalize">Update Profile</p>
@@ -271,11 +271,11 @@ transform: scale(0.75, 0.75);
 @media(max-width: 768px) {
     flex-direction: column;
     justify-content: center;
-    // transform: scale(0.85,0.85);
-    margin: 0 auto;
-     margin-left: -8vw;
-      margin-top: -5em;
-    max-width: 100vw;
+    transform: scale(none);
+    margin-left: -2.8em;
+    margin-right: 6em;
+    margin-top: -27.0vw;
+    max-width: 100%;
     flex-wrap: wrap;
   
     
@@ -287,10 +287,11 @@ const LeftPane = styled.div `
 max-width: fit-content;
 padding: 20px;
 border-radius: 0.625rem;
-background-color: #0C4DAE;
+// background-color: #0C4DAE;
 text-align: center;
 padding-bottom: 2em;
 padding-right: 2em;
+box-sizing: border-box;
 `
 
 const RightPane = styled(LeftPane)`

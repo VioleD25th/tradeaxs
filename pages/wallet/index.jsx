@@ -44,7 +44,7 @@ const initWebsocket = () => {
 
 const WalletCard = () => {
   return (
-      <a className="flex items-end justify-between bg-[rgba(12,77,174,0.37)] rounded-[0.625rem] py-[0.375rem] pl-[1.0625rem] pr-[0.75rem] transition-transform duration-200 hover:scale-105 focus:scale-105">
+      <a className="flex items-end justify-between bg-[rgba(12,77,174,0.37)] contrast-150 drop-shadow-md rounded-[0.625rem] py-[0.375rem] pl-[1.0625rem] pr-[0.75rem] transition-transform duration-200 hover:scale-105 focus:scale-105">
           <p id="bitcoin-price">---</p>
       </a>
      

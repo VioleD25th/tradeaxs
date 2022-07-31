@@ -6,11 +6,19 @@ import Path2 from "../../assets/svg/Path 2-1.svg";
 import Path4 from "../../assets/svg/Path 2-3.svg";
 import Path3 from "../../assets/svg/Path 2-2.svg";
 import Path1 from "../../assets/svg/Path 2.svg";
+import {Helmet} from "react-helmet";
 
 const Trends = () => {
   return (
     <div className="flex-1 text-textGray">
-      <h1 className="mb-5 text-sm uppercase text-textGray">Trend</h1>
+      <div className="col">
+        <Helmet>
+    <script src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
+    <div className="livecoinwatch-widget-3" lcw-base="USD" lcw-d-head="true" lcw-d-name="true" lcw-d-code="true" lcw-d-icon="true" lcw-color-tx="#ffffff" lcw-color-bg="#113377" lcw-border-w="0" >
+    </div>
+    </Helmet>
+
+</div>
       <div className="flex flex-wrap items-start justify-between gap-5">
         <div className="w-full lg:w-44">
           <span className="flex items-center justify-between mb-2 opacity-70">
